@@ -40,7 +40,7 @@ class App {
     this.app.use('/', router);
 
     this.app.use('/api/hotel_trawexv6/', trawexRouter);
-
+    this.app.use('/api/flight_trawex/', trawexRouter );
   }
 }
 

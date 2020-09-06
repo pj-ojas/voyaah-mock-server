@@ -17,8 +17,18 @@ trawexRouter.get('/hotel_search', async (req: Request, res: Response) => {
       error: JSON.stringify(error)
     });
   }
-
 });
-
+trawexRouter.get('/authenticate', async (req: Request, res: Response) => {
+  try {
+    const result =  {SessionId: '123456'};
+    res.status(200).send(result);
+  }
+  catch(error) {
+    res.status(400).send({
+      status: 'failed',
+      error: JSON.stringify(error)
+    });
+  }
+});
 
 export default trawexRouter;
